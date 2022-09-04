@@ -21,9 +21,9 @@
         <nav id="sidebar">
             <ul id="menu">
                 <li class="active" id="yourJobs">Your Jobs</li>
-                <li id="applicants">Applicants</li>
-                <li><a href="/Pages/contact.php">Contact</a></li>
-                <li><a href="/Pages/about.php">About</a></li>
+                <li id="applicants" class="inactive">Applicants</li>
+                <li><a href="/Pages/contact.php" class="inactive">Contact</a></li>
+                <li><a href="/Pages/about.php" class="inactive">About</a></li>
             </ul>
         </nav>
         <div id="content">
@@ -43,7 +43,7 @@
                 <input type="text" name="ctc"><br>
                 <div id="formButtons">
                     <button id="cancel">Cancel</button>
-                    <button type="submit" name="postJob">Post</button>
+                    <button type="submit" name="postJob" id="postJobButt">Post</button>
                 </div>
             </form>
             <form action="" method="POST">

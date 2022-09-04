@@ -1,4 +1,3 @@
-<?php include "config.php"?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +12,7 @@
 <body>
     <?php include "navbar.php"?>
     <div id="registerForm">
+    <?php include "config.php"?>
         <form method="post" id="form">
             <label for="username">Name</label><br>
             <input type="text" name="name" id="username"><br>

@@ -1,27 +1,26 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     font-family: 'Roboto', sans-serif;
+    background-color: rgb(233, 233, 233);
 }
 
-a{
+a {
     text-decoration: none;
     color: black;
 }
 
-#navbar{
-    z-index: 10;
-}
-
-#formButtons{
+#formButtons {
     display: flex;
     justify-content: space-between;
 }
 
-#postJob, #formButtons button, #refresh{
+#postJob,
+#postJobButt,
+#refresh, #cancel {
     background-color: rgba(73, 73, 255, 0.966);
     color: white;
     padding: .7rem;
@@ -30,12 +29,14 @@ a{
     border: none;
 }
 
-#postJob:hover, #formButtons button:hover, #refresh:hover{
+#postJob:hover,
+#postJobButt:hover,
+#refresh:hover {
     background-color: rgba(98, 98, 255, 0.945);
     cursor: pointer;
 }
 
-#postJobForm{
+#postJobForm {
     position: absolute;
     display: grid;
     margin: 1rem;
@@ -47,25 +48,36 @@ a{
     transition: 0.3s ease-in-out;
 }
 
-#postJobForm input, #postJobForm textarea{
-    padding: .3rem;
+#postJobForm input,
+#postJobForm textarea {
+    padding: .5rem;
     margin: .5rem 0rem .5rem 0rem;
     border-radius: 0.6rem;
     outline: none;
     border: 2px solid rgba(45, 49, 255, 0.6);
 }
 
-#postJobForm input:focus, #postJobForm textarea:focus{
+#postJobForm input:focus,
+#postJobForm textarea:focus {
     border: 2px solid blue;
 }
 
-#postJobForm textarea{
+#postJobForm textarea {
     height: 5rem;
+}
+
+#cancel{
+    background-color: rgb(253, 62, 62);
+}
+
+#cancel:hover{
+    background-color: rgb(255, 86, 86);
+    cursor: pointer;
 }
 
 #sidebar{
     position: fixed;
-    background-color: rgb(206, 206, 206);
+    background-color: rgb(56, 56, 56);
     padding: 1rem;
     height: 100vh;
 }
@@ -75,7 +87,7 @@ a{
     padding: .7rem;
     border-radius: .6rem;
     margin: .3rem;
-    background-color: rgb(218, 218, 218);
+    background-color: rgb(71, 71, 71);
 }
 
 #sidebar ul li:hover, #sidebar ul .active{
@@ -83,19 +95,28 @@ a{
     cursor: pointer;
 }
 
-#content{
+.inactive a, .inactive{
+    color: rgb(230, 230, 230);
+}
+
+.inactive:hover, .inactive:hover > a{
+    color: rgb(17, 17, 17);
+}
+
+#content {
     margin-left: 10vw;
 }
 
-#details{
+#details {
     z-index: 2;
 }
 
-#appliedDetails{
+#appliedDetails {
     z-index: 1;
 }
 
-#details, #appliedDetails{
+#details,
+#appliedDetails {
     background-color: rgb(243, 243, 243);
     margin: 1rem;
     width: 80vw;
@@ -103,23 +124,35 @@ a{
     border-radius: 0.6rem;
 }
 
-#details tr:nth-child(even), #appliedDetails tr:nth-child(even){
+#details tr:nth-child(even),
+#appliedDetails tr:nth-child(even) {
     background-color: rgb(209, 209, 209);
 }
 
-#details tr, #appliedDetails tr{
+#details tr,
+#appliedDetails tr {
     border-bottom: 1px solid rgb(187, 187, 187);
 }
 
-#details td, #appliedDetails td{
+#details tr:last-child {
+    border-bottom: none;
+}
+
+#details td,
+#appliedDetails td {
     text-align: center;
 }
 
-#details, #appliedDetails, #details th, #appliedDetails th, #details td, #appliedDetails td{
+#details,
+#appliedDetails,
+#details th,
+#appliedDetails th,
+#details td,
+#appliedDetails td {
     padding: 1rem;
     border-collapse: collapse;
 }
 
-#details tr{
+#details tr {
     text-align: center;
 }
