@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(31, 31, 31);
+    color: rgb(17, 17, 17);
+}
+
+a{
+    text-decoration: none;
+}
+
+#sidebar{
+    background-color: rgb(56, 56, 56);
+    padding: 1rem;
+    height: 100vh;
+}
+
+#sidebar ul li{
+    list-style-type: none;
+    padding: .7rem;
+    border-radius: .6rem;
+    margin: .3rem;
+    background-color: rgb(71, 71, 71);
+}
+
+#sidebar ul li:hover, #sidebar ul .active{
+    background-color: rgb(255, 190, 68);
+    cursor: pointer;
+}
+
+.inactive a, .inactive{
+    color: rgb(230, 230, 230);
+}
+
+.inactive:hover, .inactive:hover > a{
+    color: rgb(17, 17, 17);
+}
