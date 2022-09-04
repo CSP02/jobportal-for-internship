@@ -6,12 +6,34 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: rgb(233, 233, 233);
+    font-size: 14pt;
 }
 
 a {
     text-decoration: none;
     color: black;
 }
+
+.infoHolder{
+    display: grid;
+    position: absolute;
+    z-index: 3;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.486);
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.infoHolder .info{
+    margin: 4rem;
+    padding: 4rem;
+    background-color: rgba(221, 221, 221, 0.678);
+    backdrop-filter: blur(24px);
+    border-radius: .6rem;
+}
+
 
 #formButtons {
     display: flex;
@@ -20,7 +42,7 @@ a {
 
 #postJob,
 #postJobButt,
-#refresh, #cancel {
+#refresh, #cancelAndRefresh {
     background-color: rgba(73, 73, 255, 0.966);
     color: white;
     padding: .7rem;
@@ -66,11 +88,11 @@ a {
     height: 5rem;
 }
 
-#cancel{
+#cancelAndRefresh{
     background-color: rgb(253, 62, 62);
 }
 
-#cancel:hover{
+#cancelAndRefresh:hover{
     background-color: rgb(255, 86, 86);
     cursor: pointer;
 }
@@ -84,39 +106,40 @@ a {
 
 #sidebar ul li{
     list-style-type: none;
+}
+
+#yourJobs, #applicants, #sidebar ul li a p{
     padding: .7rem;
     border-radius: .6rem;
-    margin: .3rem;
+    margin: .3rem 0rem .3rem 0rem;
     background-color: rgb(71, 71, 71);
 }
 
-#sidebar ul li:hover, #sidebar ul .active{
+#yourJobs:hover, #applicants:hover, #sidebar ul li a p:hover, #sidebar ul .active{
     background-color: rgb(255, 190, 68);
+    color: black;
     cursor: pointer;
 }
 
-.inactive a, .inactive{
+.active{
+    background-color: rgb(255, 190, 68);
+    color: rgb(0, 0, 0);
+}
+
+.inactive a p, .inactive{
     color: rgb(230, 230, 230);
 }
 
-.inactive:hover, .inactive:hover > a{
-    color: rgb(17, 17, 17);
-}
-
 #content {
-    margin-left: 10vw;
-}
-
-#details {
-    z-index: 2;
+    margin-left: 15vw;
 }
 
 #appliedDetails {
-    z-index: 1;
+    visibility: hidden;
 }
 
 #details,
-#appliedDetails {
+#appliedDetails, #content p {
     background-color: rgb(243, 243, 243);
     margin: 1rem;
     width: 80vw;
@@ -134,8 +157,16 @@ a {
     border-bottom: 1px solid rgb(187, 187, 187);
 }
 
-#details tr:last-child {
-    border-bottom: none;
+#details tr:last-child, #appliedDetails tr:last-child{
+    border-bottom: 0px solid transparent;
+}
+
+#details tr:last-child td:last-child, #appliedDetails tr:last-child td:last-child {
+    border-bottom-right-radius: .6rem;
+}
+
+#details tr:last-child td:first-child, #appliedDetails tr:last-child td:first-child {
+    border-bottom-left-radius: .6rem;
 }
 
 #details td,

@@ -1,5 +1,5 @@
 window.onload = () => {
-    const buttons = [...document.getElementById('menu').getElementsByTagName('li')]
+    const buttons = [...document.getElementById('menu').getElementsByClassName('buttons')]
     buttons.forEach(button => {
         button.addEventListener('click', (clicked) => {
             buttons.forEach(butt => {
@@ -21,7 +21,7 @@ window.onload = () => {
         postJobForm.style.position = 'relative';
     })
 
-    const cancelPosting = document.getElementById('cancel');
+    const cancelPosting = document.getElementById('cancelAndRefresh');
     cancelPosting.addEventListener('click', ()=>{
         postJobForm.style.visibility = 'hidden';
         postJobForm.style.overflowY = 'scroll';
@@ -33,15 +33,22 @@ window.onload = () => {
     applicantsButton.addEventListener('click', ()=>{
         const appliedDetails = document.getElementById('appliedDetails');
         const details = document.getElementById('details');
-        appliedDetails.style.zIndex = '2';
-        details.style.zIndex = '1';
+        details.style.visibility = 'hidden';
+        appliedDetails.style.visibility = 'visible';
     })
 
     const yourPostings = document.getElementById('yourJobs');
     yourPostings.addEventListener('click', ()=>{
         const appliedDetails = document.getElementById('appliedDetails');
         const details = document.getElementById('details');
-        appliedDetails.style.zIndex = '1';
-        details.style.zIndex = '2';
+        details.style.visibility = 'visible';
+        appliedDetails.style.visibility = 'hidden';
     })
+
+    setTimeout(() => {
+        [...document.getElementsByClassName('infoHolder')].forEach(holder =>{
+            holder.remove();
+            window.location = '/Pages/signin.php';
+        })
+    }, 3000);
 }

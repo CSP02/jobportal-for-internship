@@ -1,2 +1,8 @@
-// username = `<ul id="newUser"><li><a href="/Pages/signin.php">Sign in</a></li>
-// <li><a href="/Pages/register.php">Register</a></li></ul>`;
+window.onload = ()=>{
+    setTimeout(() => {
+        [...document.getElementsByClassName('infoHolder')].forEach(holder =>{
+            holder.remove();
+            // window.location = '/Pages/signin.php';
+        })
+    }, 3000);
+}

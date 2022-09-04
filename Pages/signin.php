@@ -12,9 +12,9 @@
 </head>
 <body>
     <?php include "navbar.php"?>
+    <?php include 'config.php'?>
     <div id="signin">
         <form id="form" method="POST">
-            <?php include 'config.php'?>
             <label for="username">E-mail:</label></br>
             <input type="email" name="email" id="userName" required autocomplete="off"></br>
             <label for="password">Password:</label></br>

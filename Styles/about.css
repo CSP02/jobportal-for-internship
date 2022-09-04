@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14pt;
+    background-image: url('/Images/polygon-scatter-haikei.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+#about{
+    background-color: rgba(66, 66, 66, 0.151);
+    backdrop-filter: blur(24px);
+    width: 90vw;
+    height: 80vh;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: .6rem;
+    overflow-y: scroll;
+    line-height: 2rem;
+}
+
+
+::-webkit-scrollbar{
+    width: .3rem;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgb(29, 29, 29);
+    width: .3rem;
+    border-radius: .6rem;
+}

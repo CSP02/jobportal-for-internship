@@ -35,9 +35,10 @@
 </style>
 <nav id="navBar">
     <ul id="quickLinks">
-        <li><a href="/index.php">Home</a></li>
+        <li><a href="/index.php">Home <i class="fa-solid fa-house"></i></a></li>
         <li><a href="">Features</a></li>
         <li><a href="">Pricing</a></li>
+        <li><a href="/Pages/about.php">About</a></li>
     </ul>
     <div id="user">
         <?php

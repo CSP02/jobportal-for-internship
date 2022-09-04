@@ -20,14 +20,19 @@
     <div style="display:flex;">
         <nav id="sidebar">
             <ul id="menu">
-                <li class="active" id="yourJobs">Your Jobs</li>
-                <li id="applicants" class="inactive">Applicants</li>
-                <li><a href="/Pages/contact.php" class="inactive">Contact</a></li>
-                <li><a href="/Pages/about.php" class="inactive">About</a></li>
+                <li class="active buttons refresh" id="yourJobs">Your Jobs</li>
+                <li id="applicants" class="inactive buttons">Applicants</li>
+                <li><a href="mailto:chandrapilla2002@gmail.com"><p class="inactive buttons">Contact</p></a></li>
+                <li><a href="/Pages/about.php"><p class="inactive buttons">About</p></a></li>
             </ul>
         </nav>
         <div id="content">
-            <button id="postJob">Post Job</button>
+            <div style="width:80vw; display: flex; justify-content:space-between;">
+                <button id="postJob">Post Job</button>
+                <form action="" method="POST">
+                    <button type="submit" name="refresh" id="refresh"><i class="fa-solid fa-arrows-rotate"></i></button>
+                </form>
+            </div>
             <form action="" method="post" id="postJobForm">
                 <label for="companyName">Company name:</label><br>
                 <input type="text" name="companyName"><br>
@@ -42,13 +47,11 @@
                 <label for="ctc">CTC:</label><br>
                 <input type="text" name="ctc"><br>
                 <div id="formButtons">
-                    <button id="cancel">Cancel</button>
+                    <button id="cancelAndRefresh" name="cancelAndRefresh">Cancel</button>
                     <button type="submit" name="postJob" id="postJobButt">Post</button>
                 </div>
             </form>
-            <form action="" method="POST">
-                <button type="submit" name="refresh" id="refresh">Refresh</button>
-            </form>
+            <div id="detailsHolder">
             <table id="details">
                 <tr>
                     <th>Job ID</th>
@@ -61,14 +64,20 @@
                 </tr>
             <?php include 'config.php'?>
             </table>
+            </div>
+            <div id="appliedHolder">
             <table id="appliedDetails">
                 <tr>
                     <th>#</th>
+                    <th>Applied for</th>
+                    <th>Company</th>
+                    <th>Location</th>
                     <th>Name</th>
                     <th>email</th>
                     <th>Phone number</th>
                 </tr>
-            </table>
+                <?php include 'fetchAllApps.php'?>
+            </table></div>
         </div>
     </div>
 </body>

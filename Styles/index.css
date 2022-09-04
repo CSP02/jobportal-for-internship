@@ -8,6 +8,7 @@ body{
     background-color: rgb(26, 26, 26);
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
+    font-size: 14pt;
 }
 
 a{
@@ -47,6 +48,26 @@ nav ul li{
     display: inline-block;
 }
 
+.infoHolder{
+    display: grid;
+    position: fixed;
+    z-index: 3;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.486);
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.infoHolder .info{
+    margin: 4rem;
+    padding: 4rem;
+    background-color: rgba(221, 221, 221, 0.678);
+    backdrop-filter: blur(24px);
+    border-radius: .6rem;
+}
+
 #user{
     color: rgb(223, 223, 223);
 }
@@ -56,7 +77,7 @@ nav ul li{
     width: 100vw;
     height: 100vh;
     background-image: url("/Images/the-future-changes-now.webp");
-    background-size: 100vw;
+    background-size: cover;
     background-repeat: no-repeat;
     justify-items: stretch;
     align-items: center;
@@ -104,10 +125,10 @@ nav ul li{
     width: 100vw;
     padding: 1rem;
     margin: 5rem 0rem 5rem 0rem;
+    justify-content: center;
 }
 
 #jobCards h1{
-    width: 100vw;
     color: white;
     margin: 1rem;
     padding: 1rem;
@@ -118,18 +139,25 @@ nav ul li{
     display: grid;
     margin: 1rem;
     padding: 2rem;
-    width: 25vw;
+    width: 30vw;
+    height: max-content;
     border-radius: 0.6rem;
     background-color: rgb(32, 32, 32);
     box-shadow: 0.3rem 0.3rem 1rem rgb(43, 43, 43);
     transition: 0.3s ease-in-out;
     color: rgb(228, 228, 228);
+    font-size: 14pt;
 }
 
 .jobCard *{
     margin: 0.5rem 0rem 0.5rem 0rem;
     text-align: left;
 }
+
+.jobCard input{
+    display: none;
+}
+
 .companyName, .jobTitle, h4{
     text-align: center;
     color: rgb(247, 179, 53);
@@ -138,6 +166,7 @@ nav ul li{
 .jobDes{
     overflow-y: hidden;
     height: 20vh;
+    font-size: 14pt;
 }
 
 .jobDes:hover{
@@ -145,8 +174,10 @@ nav ul li{
 }
 
 .jobCard:hover{
+    content: 'apply?';
     transform: scale(1.05, 1.05);
     transition: 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .jobDes::-webkit-scrollbar{
@@ -158,4 +189,8 @@ nav ul li{
 .jobDes::-webkit-scrollbar-thumb{
     background-color: rgb(117, 117, 117);
     border-radius: 0.6rem;
+}
+
+.otherDetails{
+    display: flex;
 }

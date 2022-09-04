@@ -5,4 +5,10 @@ window.onload = () => {
             console.log(jobCard)
         })
     });
+
+    setTimeout(() => {
+        [...document.getElementsByClassName('infoHolder')].forEach(holder =>{
+            holder.remove();
+        })
+    }, 3000);
 }

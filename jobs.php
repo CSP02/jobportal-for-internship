@@ -12,8 +12,6 @@ if ($conn->connect_error) {
 }
 echo "";
 
-$author = $_COOKIE['username'];
-
 $query = "SELECT * FROM `jobPostings`";
 $result = mysqli_query($conn, $query);
 $all = mysqli_fetch_all($result, MYSQLI_ASSOC);
@@ -24,21 +22,26 @@ if (mysqli_num_rows($result) > 0) {
         $company = $row['companyName'];
         $position = $row['position'];
         $description = $row['description'];
+        $skills = $row['skills'];
+        $location = $row['location'];
         $ctc = $row['ctc'];
+        $author = $row['author'];
 
-        echo "<button class='jobCard'>
-        <h1 class='jobTitle'>$position</h1>
-        <h3 class='companyName'>$company</h3>
+        echo "<form method='POST'>
+        <button class='jobCard' name='apply'>
+        <h1 class='jobTitle'><input type='disabled' name='position' value='$position'>$position</h1>
+        <h3 class='companyName'><input type='disabled' name='company' value='$company'>$company</h3>
         <div class='jobDes'>
             <p class='des'>$description</p>
         </div>
         <div class='skillsReq'>
-            <h4>Skills Required: </h4><p class='skills'>Skills</p>
-            <h4>Job Location: </h4><p class='jobLoc'>Job Location</p>
-            <h4>CTC: </h4><p class='ctc'>$ctc</p>
+            <span class='otherDetails'><h4>Skills Required: </h4><p class='skills'>&nbsp;$skills</p></span>
+            <span class='otherDetails'><h4>Job Location: </h4><p class='location'><input type='disabled' name='location' value='$location'>&nbsp;$location</p></span>
+            <span class='otherDetails'><h4>CTC: </h4><p class='ctc'>&nbsp;$ctc</p></span>
+            <span class='otherDetails'><h4>Author: </h4><p class='author'><input type='disabled' name='author' value='$author'>&nbsp;$author</p></span>
         </div>
-    </button>";
-    }
+    </button></form><?php include 'apply.php'?>";
+    } 
 }
 else {
     echo "<h1>There are no Jobs posted yet.</h1>";
