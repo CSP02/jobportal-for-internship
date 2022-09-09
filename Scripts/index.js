@@ -1,4 +1,5 @@
 window.onload = () => {
+    adapt();
     const jobCards = [...document.getElementsByClassName('jobCard')]
     jobCards.forEach(jobCard => {
         jobCard.addEventListener('click', () => {
@@ -7,7 +8,7 @@ window.onload = () => {
     });
 
     setTimeout(() => {
-        [...document.getElementsByClassName('infoHolder')].forEach(holder =>{
+        [...document.getElementsByClassName('infoHolder')].forEach(holder => {
             holder.remove();
         })
     }, 3000);

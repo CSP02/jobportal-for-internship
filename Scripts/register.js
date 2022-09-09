@@ -1,4 +1,5 @@
 window.onload = ()=>{
+    adapt();
     const password = document.getElementById('password')
     const confirmPassword = document.getElementById('confirmPass')
     confirmPassword.addEventListener('input', ()=>{

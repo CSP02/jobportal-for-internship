@@ -97,3 +97,28 @@ label{
     backdrop-filter: blur(24px);
     border-radius: .6rem;
 }
+
+@media screen and (max-width: 900px) {
+    #form{
+        padding: 2rem;
+        height: fit-content;
+    }
+    #userName, #password{
+        height: 2rem;
+        width: 65vw;
+        padding: .3rem;
+        margin: .7rem 0rem .7rem 0rem;
+        border: 2px solid rgba(75, 78, 255, 0.6);
+        border-radius: 0.6rem;
+        outline: none;
+    }
+    #signInButt{
+        background-color: rgb(0, 38, 255);
+        padding: 1rem;
+        margin: 1rem 0rem 1rem 0rem;
+        width: 65vw;
+        font-size: 12pt;
+        border-radius: 0.6rem;
+        color: white;
+    }
+}

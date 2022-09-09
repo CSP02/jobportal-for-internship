@@ -1,27 +1,27 @@
-*{
+* {
     margin: 0rem;
     padding: 0rem;
     scroll-behavior: smooth;
 }
 
-body{
+body {
     background-image: url('/Images/blob-scene-haikei (1).svg');
     background-size: cover;
     font-family: 'Roboto', sans-serif;
     overflow: hidden;
 }
 
-a{
+a {
     color: rgb(0, 38, 255);
     text-decoration: none;
 }
 
-button{
+button {
     border: none;
     background-color: none;
 }
 
-.infoHolder{
+.infoHolder {
     display: grid;
     position: fixed;
     z-index: 3;
@@ -33,7 +33,7 @@ button{
     align-items: center;
 }
 
-.infoHolder .info{
+.infoHolder .info {
     margin: 4rem;
     padding: 4rem;
     background-color: rgba(221, 221, 221, 0.678);
@@ -41,7 +41,7 @@ button{
     border-radius: .6rem;
 }
 
-#registerForm{
+#registerForm {
     overflow: hidden;
     height: 100vh;
     width: 100vw;
@@ -50,7 +50,7 @@ button{
     justify-content: center;
 }
 
-#form{
+#form {
     margin: 2rem;
     padding: 2rem;
     width: 35vw;
@@ -59,18 +59,23 @@ button{
     border-radius: .6rem;
 }
 
-.fieldHolder, #field{
+.fieldHolder,
+#field {
     display: flex;
     width: 35vw;
     justify-content: space-between;
     align-items: center;
 }
 
-.field{
+.field {
     display: grid;
 }
 
-#username, #password, #confirmPass, #mobile, #email{
+#username,
+#password,
+#confirmPass,
+#mobile,
+#email {
     width: 15vw;
     padding: .5rem;
     margin: .5rem 0rem .5rem 0rem;
@@ -79,11 +84,16 @@ button{
     outline: none;
 }
 
-#username:focus, #password:focus, #confirmPass:focus, #select:focus, #mobile:focus, #email:focus{
+#username:focus,
+#password:focus,
+#confirmPass:focus,
+#select:focus,
+#mobile:focus,
+#email:focus {
     border: 2px solid blue;
 }
 
-#select{
+#select {
     width: 16.5vw;
     padding: 0.5rem;
     border-radius: 0.6rem;
@@ -91,7 +101,8 @@ button{
     outline: none;
 }
 
-#register, #cancel{
+#register,
+#cancel {
     background-color: rgb(66, 89, 218);
     padding: 1rem;
     margin: 1rem 0rem 1rem 0rem;
@@ -101,16 +112,70 @@ button{
     color: white;
 }
 
-#cancel{
+#cancel {
     background-color: rgb(228, 74, 74);
 }
 
-#register:hover{
+#register:hover {
     cursor: pointer;
     background-color: rgb(27, 61, 255);
 }
 
-#cancel:hover{
+#cancel:hover {
     background-color: rgb(255, 67, 67);
-    cursor:pointer;
+    cursor: pointer;
+}
+
+@media screen and (max-width:900px) {
+    #form {
+        padding: 2rem;
+        height: 50vh;
+        width: 70vw;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .fieldHolder,
+    #field {
+        display: grid;
+        width: fit-content;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #username,
+    #password,
+    #confirmPass,
+    #mobile,
+    #email {
+        width: 50vw;
+        padding: .5rem;
+        margin: .5rem 0rem .5rem 0rem;
+        border: 2px solid rgba(45, 49, 255, 0.6);
+        border-radius: 0.6rem;
+        outline: none;
+    }
+
+    #select {
+        width: 55vw;
+        padding: 0.5rem;
+        border-radius: 0.6rem;
+        border: 2px solid rgba(45, 49, 255, 0.6);
+        outline: none;
+        color: black;
+    }
+    
+    #register,
+    #cancel {
+        background-color: rgb(66, 89, 218);
+        padding: .7rem;
+        margin: 1rem 0rem 1rem 0rem;
+        width: 55vw;
+        font-size: 12pt;
+        border-radius: 0.6rem;
+        color: white;
+    }
+    #cancel {
+        background-color: rgb(228, 74, 74);
+    }
 }
