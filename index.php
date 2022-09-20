@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Styles/index.css">
+    <link rel="icon" href="/Images/Job portal-logos_white.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
@@ -23,8 +24,7 @@
         <div id="menu">
         <ul id="quickLinks">
             <li><a href="/index.php">Home <i class="fa-solid fa-house"></i></a></li>
-            <li><a href="">Features</a></li>
-            <li><a href="">Pricing</a></li>
+            <li><a href="/Pages/help.php">Help</a></li>
             <li><a href="/Pages/about.php">About</a></li>
         </ul>
         </div>

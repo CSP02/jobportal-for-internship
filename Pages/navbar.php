@@ -44,7 +44,7 @@
         top: 0;
         position: sticky;
         padding: .7rem 0rem .7rem 0rem;
-        z-index: 2;
+        z-index: 10;
     }
 
     #hiddenMenu a {
@@ -67,7 +67,7 @@
         background-color: rgb(206, 206, 206, 0.6);
         backdrop-filter: blur(24px);
         margin-top: 7vh;
-        z-index: 2;
+        z-index: 6;
     }
 
     #mobMenu {
@@ -102,9 +102,8 @@
 <div id="menu">
     <ul id="quickLinks">
         <li><a href="/index.php">Home <i class="fa-solid fa-house"></i></a></li>
-        <li><a href="">Features</a></li>
-        <li><a href="">Pricing</a></li>
         <li><a href="/Pages/about.php">About</a></li>
+        <li><a href="/Pages/help.php">Help</a></li>
     </ul>
     </div>
 
